@@ -1,15 +1,8 @@
-def main():
-    word = input('word: ')
-    print(shorten(word)).lower()
+txt = input("input: ")
+print("output: ", end="")
 
+for letter in txt:
+    if not letter in  ['a', 'e', 'i', 'o', 'u']:
+        print(letter, end="")
 
-def shorten(word):
-    new_word = ""
-    for i in range(len(word)):
-        if word[i] not in ["a", "e", "i", "o", "u"]:
-            new_word += word[i]
-    return new_word
-
-
-if __name__ == "__main__":
-    main()
+print()
